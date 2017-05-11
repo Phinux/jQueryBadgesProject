@@ -3,7 +3,7 @@ $(function() {
     // your code will go here
     
     jQuery.ajax({
-        url: 'https://www.codeschool.com/users/Phinux',
+        url: 'https://www.codeschool.com/users/Phinux.json',
         dataType: 'jsonp',
         success: function (response) {
             // handle response
