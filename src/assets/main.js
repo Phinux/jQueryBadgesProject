@@ -2,7 +2,7 @@ $(function() {
 
     // your code will go here
     
-    $.ajax({
+    jQuery.ajax({
         url: 'https://www.codeschool.com/users/Phinux',
         dataType: 'jsonp',
         success: function (response) {
@@ -12,17 +12,16 @@ $(function() {
                 $('<div>Appended item</div>',{
                     'class'    : 'course'
                 }).appendTo('#badges')
-                    .append('<h3>title</h3>')
-                    .append($('<img/>', {
-                        'scr'  : arr,
-                    })
-                    .apppend($('<a/>', {
-                        'class' : 'btn btn-primary',
-                        'href'  : 'courses url property',
-                        'target': '_blank'                        
-                    })
-                );
-            };           
+                .append('<h3>title</h3>')
+                .append($('<img/>', {
+                    'scr'  : arr,
+                }))
+                .apppend($('<a/>', {
+                    'class' : 'btn btn-primary',
+                    'href'  : 'courses url property',
+                    'target': '_blank'                        
+                }))
+            }           
         }
     });
 });
