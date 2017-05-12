@@ -8,17 +8,18 @@ $(function() {
         success: function (response) {
             // handle response
             var arr = response.courses.completed;
-            for(var i=0; i < arr.lenght; i++){
-                $('<div>Appended item</div>',{
+            for (var i = 0; i < arr.length; i++) {
+                console.log(arr[i].title);
+                $('<div></div>',{
                     'class'    : 'course'
                 }).appendTo('#badges')
-                .append('<h3>title</h3>')
-                .append($('<img/>', {
-                    'scr'  : arr,
+                .append('<h3>'+ arr[i].title + '</h3>')
+                .append($('<img>', {
+                    'src'  : arr[i].badge,
                 }))
-                .apppend($('<a/>', {
+                .append($('<a>Course</a>', {
                     'class' : 'btn btn-primary',
-                    'href'  : 'courses url property',
+                    'href'  : arr[i].url,
                     'target': '_blank'                        
                 }))
             }           
