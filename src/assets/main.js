@@ -9,7 +9,7 @@ $(function() {
             // handle response
             var arr = response.courses.completed;
             for (var i = 0; i < arr.length; i++) {
-                console.log(arr[i].title);
+                console.log(arr[i].url);
                 $('<div></div>',{
                     'class'    : 'course'
                 }).appendTo('#badges')
@@ -17,10 +17,11 @@ $(function() {
                 .append($('<img>', {
                     'src'  : arr[i].badge,
                 }))
-                .append($('<a>Course</a>', {
+                .append($('<a></a>', {
                     'class' : 'btn btn-primary',
                     'href'  : arr[i].url,
-                    'target': '_blank'                        
+                    'target': '_blank',
+                    'text'  : 'See Course'
                 }))
             }           
         }
